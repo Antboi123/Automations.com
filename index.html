@@ -77,6 +77,21 @@
 	display:inline-block;
 	}
 	
+    .btn:hover{
+	background:var(--accent);
+	color:#071021;
+	padding:10px 14px;
+	border-radius:10px;
+	font-weight:600;
+	text-decoration:none;
+	display:inline-block;
+	box-shadow: 0px 2px 20px rgb(200, 200, 200, 0.5)
+	}
+	
+	.btn {
+	transition: box-shadow 0.5s;
+	}
+	
     .btn.ghost{
 	background:transparent;
 	border:1px solid rgba(255,255,255,0.05);
@@ -171,7 +186,16 @@
 	html{
 	scroll-behavior:smooth;
 	}
-
+	.card{
+	transition: box-shadow 0.4s;
+	}
+	.card:hover {
+	background:var(--glass);
+	padding:20px;
+	border-radius:var(--radius);
+	box-shadow:0 4px 20px rgba(255,255,255,0.2);	
+	}
+	
   </style>
 </head>
 <script>
@@ -189,7 +213,7 @@ const header = document.querySelector("header");
 
 window.addEventListener("scroll", () => {
 
-  const scrollPos = window.scrollY + 210; // offset ahhh ( y axis + 200px for space and so it  ) 
+  const scrollPos = window.scrollY + 210; // offset ahhh (: y axis + 200px for space and so it works :) \\
   let current = "";
 
   sections.forEach(section => {
@@ -290,9 +314,22 @@ window.addEventListener("scroll", () => {
 		</div>
 	</section>
 	
+	<hr>
+	
+	<section style="margin-top: 25px;" id="about">
+		<div class="card">
+			<h2>About Us</h2>
+			<p class="description">We are a large scale automation service provider trusted by 1000's of customers and have over 10 years of experience.</p>
+			<p class="description">Our company aims to please you and your home or business, in terms of energy efficiency. We</p>
+			<p class="description">We specificaly specialize in automation and digital technology and include physical hardware on our products section, where we sell new and used items at a cheap price with as low shipping & import/export charges as possible, to ensure your 100% satisfication.</p>
+			<p class="description">The services we provide are designed for your satisfication based on what other buyers recomended, so that we can maximise your enjoyment and our experience, as we take in candidates to learn basic automation and technology, funded by your purchases.</p>
+		</div>
+	</section>
+	
+	
     <footer>
       <div>T's and C's apply, product of Sameer's Automations©</div>
-	  <div><a class="Creds" id="Creds" href="credits.html" target="_blank">Credits & help</a></div>
+	  <div><a class="Creds" href="#credits">Credits & help</a></div>
     </footer>
   </div>
 </body>
